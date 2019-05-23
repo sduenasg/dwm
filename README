@@ -3,14 +3,15 @@ My build of dwm 6.2
 
 Patches
 ------------
-ru_gaps
-autostart
-urgent
+- ru_gaps
+- autostart
+- urgent
 
 Modifications
 ------------
-pywal colors
-
+- disabled a couple of keybindings since I use sxhkd for them
+- pywal colors
+- dwm.desktop - copy to /usr/share/xsessions/ so that dwm shows up in the login manager
 
 dwm - dynamic window manager
 ============================
