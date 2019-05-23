@@ -11,7 +11,7 @@ Modifications
 ------------
 - disabled a couple of keybindings since I use sxhkd for them
 - pywal colors
-- dwm.desktop - copy to /usr/share/xsessions/ so that dwm shows up in the login manager
+- dwm.desktop - copy to /usr/share/xsessions/ so that dwm shows up on the login manager
 
 dwm - dynamic window manager
 ============================
