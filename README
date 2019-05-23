@@ -14,6 +14,20 @@ Modifications
 - disabled a couple of keybindings since I use sxhkd for them
 - dwm.desktop: copy to /usr/share/xsessions/ so that dwm shows up on the login manager
 
+Configuration (config.def.h)
+------------
+1) Edit config.def.h and put your home path in the pywal include
+
+    #include "/home/USERNAME/.cache/wal/colors-wal-dwm.h"
+
+2) Alpha variables are baralpha, borderalpha and fgalpha.
+
+3) Place your autostart script in ~/.dwm/autostart.sh
+
+4) When you want to compile from scratch, remember to delete config.h too (auto-generated file). Put your
+custom config in config.def.h.
+
+
 
 === Original README file ===
 
