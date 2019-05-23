@@ -59,7 +59,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel }; /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeUrg}; /* color schemes */
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
@@ -1596,6 +1596,7 @@ setup(void)
 	scheme = ecalloc(LENGTH(colors), sizeof(Clr *));
 	for (i = 0; i < LENGTH(colors); i++)
 		scheme[i] = drw_scm_create(drw, colors[i], 3);
+
 	/* init bars */
 	updatebars();
 	updatestatus();
@@ -2053,8 +2054,11 @@ updatewmhints(Client *c)
 		if (c == selmon->sel && wmh->flags & XUrgencyHint) {
 			wmh->flags &= ~XUrgencyHint;
 			XSetWMHints(dpy, c->win, wmh);
-		} else
+		} else{
 			c->isurgent = (wmh->flags & XUrgencyHint) ? 1 : 0;
+			if (c->isurgent)
++				XSetWindowBorder(dpy, c->win, scheme[SchemeUrg][ColBorder].pixel);
+		}
 		if (wmh->flags & InputHint)
 			c->neverfocus = !wmh->input;
 		else
