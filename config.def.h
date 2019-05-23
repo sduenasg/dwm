@@ -8,8 +8,16 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-
+static const unsigned int baralpha = 0x50;
+static const unsigned int borderalpha = OPAQUE;
+static const unsigned int fgalpha = 0x50;
 #include "/home/sara/.cache/wal/colors-wal-dwm.h"
+
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { fgalpha, baralpha, borderalpha },
+	[SchemeSel]  = { fgalpha, baralpha, borderalpha },
+};
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
