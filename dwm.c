@@ -1264,7 +1264,8 @@ void
 pop(Client *c)
 {
 	detach(c);
-	attachaside(c);
+	//attachaside(c);
+	attach(c);
 	focus(c);
 	arrange(c->mon);
 }
