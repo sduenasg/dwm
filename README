@@ -12,7 +12,7 @@ Patches
 Modifications
 ------------
 - pywal colors
-- disabled a couple of keybindings since I use sxhkd for them
+- disabled/changed a few keybindings
 - dwm.desktop: copy to /usr/share/xsessions/ so that dwm shows up on the login manager
 
 Configuration (config.def.h)
