@@ -8,6 +8,7 @@ Patches
 - urgent (urgent window border color)
 - alpha (transparency for the status bar and borders)
 - pertag (different layouts per tag)
+- attachaside (new windows spawn in the stack instead of replacing the master window)
 
 Modifications
 ------------
