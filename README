@@ -7,6 +7,7 @@ Patches
 - autostart (autostart script for the wm)
 - urgent (urgent window border color)
 - alpha (transparency for the status bar and borders)
+- pertag (different layouts per tag)
 
 Modifications
 ------------
